@@ -1,1 +1,1 @@
-
+<link href="/core/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
