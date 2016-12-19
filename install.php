@@ -1,4 +1,4 @@
-<!-- (c) ManageMyServer -->
+<!-- (c) ManageMyServer <?php echo date("Y"); ?> -->
 <head>
   <link href="/core/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="/core/assets/js/jquery-3.1.1.min.js"></script>
@@ -9,6 +9,6 @@
   <center><h2>Install ManageMyServer</h2></center>
   <!-- Insert installer here -->
   <footer>
-    <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer</a>
+    <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
   </footer>
 </body>
