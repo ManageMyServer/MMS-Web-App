@@ -3,10 +3,12 @@
     MMS Login Page
 -->
 <?php
+require $_SERVER['DOCUMENT_ROOT'].'/core/user.php';
 if(isset($_POST['Submit'])){ //check if form was submitted
     $username = $_POST['username']; //get input text
     $password =$_POST['password'];
 }
+
 ?>
 
 <html>
@@ -32,7 +34,7 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         </div>
         <div class="col-xs-3"></div>
     </div>
-    
+
 </body>
 </html>
 <?php
