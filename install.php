@@ -51,11 +51,6 @@
       <h2>Validate Database</h2>
       <p>
       This will validate the information you entered on the previous page.<br><b>";
-   /*echo $_GET['db_address'];
-   echo $_GET['db_name'];
-   echo $_GET['db_username'];
-   echo $_GET['db_password'];
-   echo $_GET['db_prefix'];*/
 
    $address = $_POST['db_address'];
    $username = $_POST['db_username'];
@@ -75,11 +70,12 @@
          file_put_contents('core/config.php', '
 <?php
 return [
-   $db_address = \''.$address.'\';
-   $db_name = \''.$database.'\';
-   $db_username = \''.$username.'\';
-   $db_password = \''.$password.'\';
-   $table_prefix = \''.$prefix.'\';
+   \'db_address\' = \''.$address.'\',
+   \'db_name\' = \''.$database.'\',
+   \'db_username\' = \''.$username.'\',
+   \'db_password\' = \''.$password.'\',
+   \'table_prefix\' = \''.$prefix.'\',
+]
 ?>
 ');
 
