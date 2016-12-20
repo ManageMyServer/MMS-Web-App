@@ -32,9 +32,6 @@ if(file_exists($page_path.".php")) {
 }
 
 ?>
-
-
-
 <?php
 include 'pages/includes/footer.php';
 ?>
