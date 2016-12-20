@@ -70,11 +70,11 @@
          file_put_contents('core/config.php', '
 <?php
 return [
-   \'db_address\' = \''.$address.'\',
-   \'db_name\' = \''.$database.'\',
-   \'db_username\' = \''.$username.'\',
-   \'db_password\' = \''.$password.'\',
-   \'table_prefix\' = \''.$prefix.'\',
+   \'db_address\' => \''.$address.'\',
+   \'db_name\' => \''.$database.'\',
+   \'db_username\' => \''.$username.'\',
+   \'db_password\' => \''.$password.'\',
+   \'table_prefix\' => \''.$prefix.'\',
 ]
 ?>
 ');
@@ -87,43 +87,43 @@ return [
       <h2>Setup Database</h2>
       <p>The installer will now setup the database for use with ManageMyServer.</p>
    ";
-   include 'core/config.php';
+   $config = include 'core/config.php';
 
    //START TABLE SETUP
    // Create connection
-   $conn = new mysqli($db_address, $db_username, $db_password, $db_name);
+   $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
    // Check connection
    if ($conn->connect_error) {
       die('Connection failed: ' . $conn->connect_error);
    }
 
    //Create tables
-   $sql = 'CREATE TABLE '. $table_prefix .'_prefs (
+   $sql = 'CREATE TABLE '. $config['table_address'] .'_prefs (
    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
    name VARCHAR(30) NOT NULL,
    value VARCHAR(30) NOT NULL
    )';
 
    if ($conn->query($sql) === TRUE) {
-      echo 'Table '. $table_prefix. '_prefs created successfully.';
+       echo 'Table '. $config['table_address']. '_prefs created successfully.';
    } else {
       echo 'Error creating table: ' . $conn->error;
    }echo '<br>';
 
-   $sql = 'CREATE TABLE '. $table_prefix .'_users (
+   $sql = 'CREATE TABLE '. $config['table_address'] .'_users (
    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
    username VARCHAR(30) NOT NULL,
    password VARCHAR(30) NOT NULL
    )';
 
    if ($conn->query($sql) === TRUE) {
-      echo 'Table '. $table_prefix. '_users created successfully.';
+       echo 'Table '. $config['table_address']. '_users created successfully.';
    } else {
       echo 'Error creating table: ' . $conn->error;
    }echo '<br>';
 
    //Create Record
-   $sql = 'INSERT INTO '. $table_prefix. '_users (username, password)
+   $sql = 'INSERT INTO '. $config['table_address']. '_users (username, password)
            VALUES (\'Admin\', \'password\')';
 
    if ($conn->query($sql) === TRUE) {
@@ -133,7 +133,7 @@ return [
    }echo '<br>';
 
    //Create Record
-   $sql = 'INSERT INTO '. $table_prefix. '_prefs (name, value)
+   $sql = 'INSERT INTO '. $config['table_address']. '_prefs (name, value)
            VALUES (\'sitename\', \'Example Site\')';
 
    if ($conn->query($sql) === TRUE) {
