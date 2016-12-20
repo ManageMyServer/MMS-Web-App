@@ -143,7 +143,7 @@ return [
    }echo '<br>';
 
    //END SETUP TABLE
-   echo '<br><a href="/admin" class="btn btn-success btn-medium">Continue</a>';
+   echo '<br><a href="/login" class="btn btn-success btn-medium">Continue</a>';
 
 $conn->close();
    } else {
