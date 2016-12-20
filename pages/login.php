@@ -4,8 +4,15 @@
 -->
 <?php
 if(isset($_POST['Submit'])){ //check if form was submitted
+    $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
     $username = $_POST['username']; //get input text
     $password =$_POST['password'];
+    $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+    // Check connection
+    if ($conn->connect_error) {
+        die('Connection failed: ' . $conn->connect_error);
+    }
+    $sql = 'SELECT * FROM '.$config['table_prefix'].'_users WHERE Username LIKE'.$_POST['username'];
 }
 
 ?>
