@@ -8,13 +8,10 @@
     <style>
         p {
             font-size: 12;
-        }
-
-        ;
+        };
     </style>
 </head>
 <body>
-
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -35,17 +32,6 @@
                     <li><a href="/nodes">Nodes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View Pages (DEMO) <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="/servers">Servers</a></li>
-                            <li><a href="/nodes">Nodes</a></li>
-                            <li><a href="/addserver">Create Server</a></li>
-                            <li><a href="/addnode">Add Node</a></li>
-                        </ul>
-                    </li>
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
                         <ul class="dropdown-menu">
