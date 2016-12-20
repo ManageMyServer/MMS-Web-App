@@ -1,4 +1,3 @@
-
 <?php
 include 'pages/includes/header.php';
 $directory = $_SERVER['REQUEST_URI'];
