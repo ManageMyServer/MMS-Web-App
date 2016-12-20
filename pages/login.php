@@ -35,7 +35,7 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         session_start();
         $_SESSION['username'] = $username;
     } else {
-        echo 'Wrong username/password.'
+        echo 'Wrong username/password.';
     }
 }
 ?>
