@@ -9,7 +9,7 @@ $lim = count($directories);
 include($_SERVER['DOCUMENT_ROOT'] . $page);
 if(empty($directories[0]) && empty($directories[1])){
     // Must be the index page
-    $page_path = 'pages/index.php';
+    $page_path = 'pages/index';
 } else {
     $n = 0;
     foreach($directories as $directory){
@@ -24,7 +24,12 @@ if(empty($directories[0]) && empty($directories[1])){
         $page_path = rtrim($page_path, '/');
     }
 }
-include $page_path. ".php";
+if(file_exists($page_path.".php")) {
+    include $page_path. ".php";
+} else {
+    include $_SERVER['DOCUMENT_ROOT'].'/pages/errors/404.php';
+}
+
 ?>
 
 
