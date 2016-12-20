@@ -4,6 +4,8 @@
 -->
 <?php
 if(isset($_POST['Submit'])){ //check if form was submitted
+    echo $_SESSION;
+    echo session_id();
     $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
     $username = $_POST['username']; //get input text
     $password =$_POST['password'];
