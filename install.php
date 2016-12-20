@@ -142,7 +142,7 @@
    //END SETUP TABLE
    echo '<br><a href="admin.php" class="btn btn-success btn-medium">Continue</a>';
 
-$conn->close();}; ?><footer>
+$conn->close();  ?><footer>
     <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
   </footer>
 </body>
