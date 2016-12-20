@@ -160,7 +160,6 @@ $conn->close();
          <a href=\"#\" class=\"btn btn-success btn-medium\" onclick=\"window.history.back()\">Back</a>
          <a href=\"/\" class=\"btn btn-primary btn-medium\">Home</a>
       </div>
-
       ";
    }
         ?>
