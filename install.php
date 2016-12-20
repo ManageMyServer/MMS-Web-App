@@ -6,15 +6,19 @@
   <title>Install - ManageMyServer</title>
 </head>
 <body>
-  <center><h2>Install ManageMyServer</h2></center>
-  <!-- Insert installer here Tables: users nodes servers settings --><?php
+   <center><h2>Install ManageMyServer</h2></center>
+   <!-- Insert installer here Tables: users nodes servers settings -->
+   <footer>
+     <?php
    if ($_GET["page"] == "") {
    echo "
+      <title>Welcome - Install - SimplePages</title>
       <h2>Install</h2>
-      <p>Welcome to the ManagsMyServer installer. Here is where you can intall ManageMyServer on your computer. You must have MySQL and PHP for this to work. Thanks for using SimplePages.
+      <p>Welcome to the SimplePages installer. Here is where you can intall SimplePages on your website. You must have MySQL and PHP for this to work. Thanks for using SimplePages.
       <br><br><a href=\"install.php?page=database\" class=\"btn btn-success btn-medium\">Continue</a></p>";
    } elseif ($_GET["page"] == "database") {
    echo "
+      <title>Configure Database - Install - SimplePages</title>
       <h2>Configure Database</h2>
       <p>
       This will lead you through the database setup.
@@ -43,6 +47,7 @@
    } elseif ($_GET["page"] == "validate") {
    
    echo "
+      <title>Validate - Install - SimplePages</title>
       <h2>Validate Database</h2>
       <p>
       This will validate the information you entered on the previous page.<br><b>";
@@ -81,8 +86,9 @@
    //End Vertify
    } elseif ($_GET["page"] == "setup_db") {
    echo "
+      <title>Setup Database - Install - SimplePages</title>
       <h2>Setup Database</h2>
-      <p>The installer will now setup the database for use with ManageMyServer.</p>
+      <p>The installer will now setup the database for use with SimplePages.</p>
    ";
    include 'core/config.php';
    
@@ -142,7 +148,21 @@
    //END SETUP TABLE
    echo '<br><a href="admin.php" class="btn btn-success btn-medium">Continue</a>';
 
-$conn->close();  ?><footer>
-    <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
+$conn->close();
+   } else {
+   echo "
+      <title>404 - Install - SimplePages</title>
+      <h2>404 - Uh-oh!</h2>
+      <p>Looks like the page you requested isn't at this location!</p>
+      
+      <div class=\"btn-group\" role=\"group\" aria-label=\"...\">
+         <a href=\"#\" class=\"btn btn-success btn-medium\" onclick=\"window.history.back()\">Back</a>
+         <a href=\"/\" class=\"btn btn-primary btn-medium\">Home</a>
+      </div>
+      
+      ";
+   }
+?>
+   <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
   </footer>
 </body>
