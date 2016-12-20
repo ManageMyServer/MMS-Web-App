@@ -1,7 +1,7 @@
 <?php
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 //echo $config['db_address'];
-if($config['db_address']=''){
+if($config['db_address']==''){
     header("Location: /install.php");
     die();
 }
