@@ -29,7 +29,8 @@ if(isset($_POST['Submit'])){ //check if form was submitted
     }
     if(password_verify($password, $hash)){
         echo 'Correct password';
-        session_start(); and $_SESSION['username'] = $username;
+        session_start();
+        $_SESSION['username'] = $username;
     }
 
 }
