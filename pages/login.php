@@ -12,7 +12,25 @@ if(isset($_POST['Submit'])){ //check if form was submitted
     if ($conn->connect_error) {
         die('Connection failed: ' . $conn->connect_error);
     }
-    $sql = 'SELECT * FROM '.$config['table_prefix'].'_users WHERE Username LIKE'.$_POST['username'];
+    $sql = 'SELECT * FROM '.$config['table_prefix'].'_users WHERE username=?';
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($sql))
+    {
+        print "Failed to prepare statement\n";
+    }
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $hash;
+    while ($row = $result->fetch_array(MYSQLI_NUM))
+    {
+        $hash = $row[2];
+    }
+    if(password_verify($password, $hash)){
+        echo 'Correct password';
+    }
+
 }
 
 ?>

@@ -1,8 +1,8 @@
 <?php
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 echo $config['db_address'];
-if($config['db_address']=""){
-    header($_SERVER['DOCUMENT_ROOT']."/install.php");
+if($config['db_address']=''){
+    header('Location: install.php');
 }
 include 'pages/includes/header.php';
 $directory = $_SERVER['REQUEST_URI'];
