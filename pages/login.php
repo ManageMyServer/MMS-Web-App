@@ -2,6 +2,7 @@
     (c) ManageMyServer <?php echo date("Y"); ?>
     MMS Login Page
 -->
+<div class="text-center">
 <?php
 if(isset($_POST['Submit'])){ //check if form was submitted
     echo $_SESSION;
@@ -30,15 +31,15 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         $hash = $row[2];
     }
     if(password_verify($password, $hash)){
-        echo 'Correct password';
+        echo 'Correct password.';
         session_start();
         $_SESSION['username'] = $username;
+    } else {
+        echo 'Wrong username/password.'
     }
-
 }
-
 ?>
-
+</div>
 <html>
 
 <body>
