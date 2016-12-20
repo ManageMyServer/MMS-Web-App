@@ -8,7 +8,6 @@
 <body>
    <center><h2>Install ManageMyServer</h2></center>
    <!-- Insert installer here Tables: users nodes servers settings -->
-   <footer>
      <?php
    if ($_GET["page"] == "") {
    echo "
@@ -163,6 +162,6 @@ $conn->close();
       ";
    }
 ?>
-   <br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
+   <footer><br><hr><p class="pull-right">This installer was made by ManageMyServer.</p><a href="https://github.com/managemyserver/">&copy; ManageMyServer <?php echo date("Y"); ?></a>
   </footer>
 </body>
