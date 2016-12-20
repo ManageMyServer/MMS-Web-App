@@ -6,68 +6,59 @@
   <title>Install - ManageMyServer</title>
 </head>
 <body>
-  <center><h2>Install ManageMyServer</h2></center>
-  <!-- Insert installer here Tables: users nodes servers settings --><?php
+   <center><h2>Install ManageMyServer</h2></center>
+   <!-- Insert installer here Tables: users nodes servers settings -->
+   <?php
    if ($_GET["page"] == "") {
    echo "
-      <h2>Install</h2>
-      <p>Welcome to the ManagsMyServer installer. Here is where you can intall ManageMyServer on your computer. You must have MySQL and PHP for this to work. Thanks for using SimplePages.
-      <br><br><a href=\"install.php?page=database\" class=\"btn btn-success btn-medium\">Continue</a></p>";
+       <h2>Install</h2>
+       <p>Welcome to the ManagsMyServer installer. Here is where you can intall ManageMyServer on your computer. You must have MySQL and PHP for this to work. Thanks for using ManageMyServer.
+       <br><br><a href=\"install.php?page=database\" class=\"btn btn-success btn-medium\">Continue</a></p>";
    } elseif ($_GET["page"] == "database") {
    echo "
-      <h2>Configure Database</h2>
-      <p>
-      This will lead you through the database setup.
-      <form method=\"post\" action=\"install.php?page=validate\">
-      <div class=\"form-group\">
-         <label class=\"control-label\" for=\"inputDefault\">Database Address</label>
-         <input type=\"text\" name=\"db_address\" class=\"form-control\" id=\"inputDefault\">
-      </div>
-      <div class=\"form-group\">
-         <label class=\"control-label\" for=\"inputDefault\">Database Name</label>
-         <input type=\"text\" name=\"db_name\" class=\"form-control\" id=\"inputDefault\">
-      </div>
-      <div class=\"form-group\">
-         <label class=\"control-label\" for=\"inputDefault\">Database Username</label>
-         <input type=\"text\" name=\"db_username\" class=\"form-control\" id=\"inputDefault\">
-      </div>
-      <div class=\"form-group\">
-         <label class=\"control-label\" for=\"inputDefault\">Database Password</label>
-         <input type=\"password\" name=\"db_password\" class=\"form-control\" id=\"inputDefault\">
-      </div>
-      <div class=\"form-group\">
-         <label class=\"control-label\" for=\"inputDefault\">Table Prefix (If none entered, it will be _ .)</label>
-         <input type=\"text\" name=\"db_prefix\" class=\"form-control\" id=\"inputDefault\">
-      </div>
-      <br><input class=\"btn btn-success btn-medium\" type=\"submit\" name=\"submit\" value=\"Validate &amp; Continue\"></input></p>";
+       <h2>Configure Database</h2>
+       <p>
+       This will lead you through the database setup.
+       <form method=\"post\" action=\"install.php?page=validate\">
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Database Address</label>
+           <input type=\"text\" name=\"db_address\" class=\"form-control\" id=\"inputDefault\">
+       </div>
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Database Name</label>
+           <input type=\"text\" name=\"db_name\" class=\"form-control\" id=\"inputDefault\">
+       </div>
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Database Username</label>
+           <input type=\"text\" name=\"db_username\" class=\"form-control\" id=\"inputDefault\">
+       </div>
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Database Password</label>
+           <input type=\"password\" name=\"db_password\" class=\"form-control\" id=\"inputDefault\">
+       </div>
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Table Prefix (If none entered, it will be _ .)</label>
+           <input type=\"text\" name=\"db_prefix\" class=\"form-control\" id=\"inputDefault\">
+       </div>
+       <br><input class=\"btn btn-success btn-medium\" type=\"submit\" name=\"submit\" value=\"Validate &amp; Continue\"></input></p>";
    } elseif ($_GET["page"] == "validate") {
-   
    echo "
-      <h2>Validate Database</h2>
-      <p>
-      This will validate the information you entered on the previous page.<br><b>";
-   /*echo $_GET['db_address'];
-   echo $_GET['db_name'];
-   echo $_GET['db_username'];
-   echo $_GET['db_password'];
-   echo $_GET['db_prefix'];*/
-   
-   $address = $_POST['db_address'];
-   $username = $_POST['db_username'];
-   $password = $_POST['db_password'];
-   $database = $_POST['db_name'];
-   $prefix = $_POST['db_prefix'];
-   
-   // Create connection
-   $conn = new mysqli($address, $username, $password, $database);
-
-   // Check connection
-   if ($conn->connect_error) {
-       echo("Connection failed: " . $conn->connect_error. "</b><br><br><a href=\"#\" class=\"btn btn-success btn-medium\" onclick=\"window.history.back()\">Go Back</a>");
-   } else {
-      
-         echo "Connected successfully to the database.</b><br><br><a href=\"install.php?page=setup_db\" class=\"btn btn-success btn-medium\">Continue</a>";
-         file_put_contents('core/config.php', '
+       <h2>Validate Database</h2>
+       <p>
+       This will validate the information you entered on the previous page.<br><b>";
+       $address = $_POST['db_address'];
+       $username = $_POST['db_username'];
+       $password = $_POST['db_password'];
+       $database = $_POST['db_name'];
+       $prefix = $_POST['db_prefix'];
+       // Create connection
+       $conn = new mysqli($address, $username, $password, $database);
+       // Check connection
+       if ($conn->connect_error) {
+           echo("Connection failed: " . $conn->connect_error. "</b><br><br><a href=\"#\" class=\"btn btn-success btn-medium\" onclick=\"window.history.back()\">Go Back</a>");
+       } else {
+       echo "Connected successfully to the database.</b><br><br><a href=\"install.php?page=setup_db\" class=\"btn btn-success btn-medium\">Continue</a>";
+       file_put_contents('core/config.php', '
 <?php
    $db_address = \''.$address.'\';
    $db_name = \''.$database.'\';
@@ -76,23 +67,22 @@
    $table_prefix = \''.$prefix.'\';
 ?>
 ');
-      
-   } echo "</p>";
-   //End Vertify
-   } elseif ($_GET["page"] == "setup_db") {
-   echo "
+      } echo "</p>";
+      //End Vertify
+      } elseif ($_GET["page"] == "setup_db") {
+      echo "
       <h2>Setup Database</h2>
-      <p>The installer will now setup the database for use with ManageMyServer.</p>
-   ";
-   include 'core/config.php';
+      <p>The installer will now setup the database for use with ManageMyServer.</p>
+      ";
+      include 'core/config.php';
    
-   //START TABLE SETUP
-   // Create connection
-   $conn = new mysqli($db_address, $db_username, $db_password, $db_name);
-   // Check connection
-   if ($conn->connect_error) {
-      die('Connection failed: ' . $conn->connect_error);
-   }
+      //START TABLE SETUP
+      // Create connection
+      $conn = new mysqli($db_address, $db_username, $db_password, $db_name);
+      // Check connection
+      if ($conn->connect_error) {
+          die('Connection failed: ' . $conn->connect_error);
+      }
    
    //Create tables
    $sql = 'CREATE TABLE '. $table_prefix .'_prefs (
