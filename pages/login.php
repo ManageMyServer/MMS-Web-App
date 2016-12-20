@@ -3,7 +3,6 @@
     MMS Login Page
 -->
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/core/user.php';
 if(isset($_POST['Submit'])){ //check if form was submitted
     $username = $_POST['username']; //get input text
     $password =$_POST['password'];
