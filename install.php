@@ -3,7 +3,6 @@
   <link href="/core/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="/core/assets/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="/core/assets/js/bootstrap.min.js"></script>
-  <title>Install - ManageMyServer</title>
 </head>
 <body>
     <div class="container">
