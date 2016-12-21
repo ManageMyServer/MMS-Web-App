@@ -1,4 +1,5 @@
 <?php
+
 ob_start();
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');

@@ -46,6 +46,28 @@ if(sizeof($users) == 0){
         </div>
     </div>';
 }
+if(isset($_POST['Delete'])){
+    $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+    // Check connection
+    if ($conn->connect_error) {
+        die('Connection failed: ' . $conn->connect_error);
+    }
+    $sql = 'DELETE FROM '.$config['table_prefix'].'_users WHERE id=?';
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($sql))
+    {
+        print "Failed to prepare statement\n";
+    }
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i",$_GET['id']);
+    $stmt->execute();
+    if(empty(mysqli_stmt_error($stmt))){
+        header("Location: /admin/users");
+    }
+    echo mysqli_stmt_error($stmt);
+}
 if(isset($_POST['Submit'])){
     if($_POST['username'] == $username && $_POST['password'] == ''){
         $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
@@ -145,6 +167,9 @@ if(isset($_POST['Submit'])){
 <div class="container">
     <div class="col-xs-2"></div>
     <div class="col-xs-8 ">
+        <div class="text-center">
+            <h2>User: <?php echo $results['0']['0']?></h2>
+        </div>
         <form action="" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -169,6 +194,30 @@ if(isset($_POST['Submit'])){
             </div>
 
         </form>
+        <?php if($results['0']['3'] != 1){echo '
+        <button type="button" class="btn btn-primary btn-danger" data-toggle="modal" data-target="#myModal">
+            Delete user
+        </button>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button style="float: left" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <form action="" method="post">
+                            <input type="submit" name="Delete" class="btn btn-primary" value="Delete" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>';}?>
     </div>
     <div class="col-xs-2"></div>
 </div>
