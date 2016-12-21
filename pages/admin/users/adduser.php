@@ -1,6 +1,6 @@
 <!--
     (c) ManageMyServer <?php echo date("Y"); ?>
-    MMS Login Page
+    MMS Create User Page
 -->
 <div class="text-center">
     <?php
@@ -40,7 +40,7 @@
             <div class="form-group">
                 <form action="" method="post">
 
-                    <h2>Login</h2>
+                    <h2>Create User</h2>
                     <?php echo $message; ?>
                     <div class="form-group">
                         <input type="text" name="username" class="form-control" placeholder="Username" />
