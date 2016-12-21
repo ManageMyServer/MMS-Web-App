@@ -191,8 +191,8 @@ if(isset($_POST['Submit'])){
                 <div class="btn-group text-center" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
                 </div>
+                <br><br><a href="#" onclick="window.history.back()">Back to Users</a>
             </div>
-
         </form>
         <?php if($results['0']['3'] != 1){echo '
         <button type="button" class="btn btn-primary btn-danger" data-toggle="modal" data-target="#myModal">
