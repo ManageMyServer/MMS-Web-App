@@ -26,6 +26,8 @@
         $stmt->bind_param("sss", $username, $hash, $rank);
         $stmt->execute();
         echo mysqli_stmt_error($stmt);
+        header("Location: /admin/users");
+        die();
        }
     ?>
 </div>
