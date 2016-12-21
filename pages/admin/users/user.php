@@ -51,8 +51,12 @@ if(sizeof($users) == 0){
     <div class="col-xs-8 ">
         <form action="" method="post">
             <div class="form-group">
-                <label for="username">User type</label>
+                <label for="username">Username</label>
                 <input id="username" type="text" name="username" class="form-control" value="<?php echo $results['0']['0'];?>" />
+            </div>
+            <div class="form-group">
+                <label for="password">Change Password (leave blank if you don't want to change it)</label>
+                <input id="password" type="password" name="password" class="form-control" value="<?php echo $results['0']['0'];?>" />
             </div>
             <div class="form-group">
                 <label for="exampleSelect1">User type</label>
