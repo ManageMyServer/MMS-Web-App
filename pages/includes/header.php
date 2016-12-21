@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?$config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');?>
 <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
@@ -39,7 +40,7 @@ window.cookieconsent.initialise({
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><?$config['site_title']?></a>
+                <a class="navbar-brand" href="/"><?echo $config['site_title']?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
