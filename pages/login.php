@@ -44,6 +44,8 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         $_SESSION['username'] = $username;
         $_SESSION['rank'] = $rank;
         print_r($_SESSION);
+        header('Location: /');
+        die();
     } else {
         echo 'Invalid username/password.';
     }
