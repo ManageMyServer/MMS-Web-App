@@ -42,8 +42,8 @@ if(isset($_POST['Submit'])){
         $rank = $row[2];
     }
     echo '<br>';
-    echo $hash;
-    echo '<br>';
+    //echo $hash;
+    //echo '<br>';
     if($usernamesql == ''){
         echo '<script>jQuery(function(){$(\'[name="username"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="password"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="group"]\').addClass("has-danger")})</script>';
     } elseif(password_verify($password, $hash)){
