@@ -1,4 +1,5 @@
 <?php
+session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 //echo $config['db_address'];
 if($config['db_address']==''){

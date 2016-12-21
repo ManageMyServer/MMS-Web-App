@@ -1,7 +1,7 @@
 <?php
-    echo 'Logging out...'
+    echo 'Logging out...';
     session_unset();
     session_destroy();
-    header("Location: /index.php");
+    header("Location: /");
     die();
 ?>

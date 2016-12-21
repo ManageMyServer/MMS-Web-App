@@ -3,7 +3,10 @@
     MMS Login Page
 -->
 <div class="text-center">
-<?php
+    <?php
+if(!($_SESSION['username']=='')){
+    header('Location: /');
+}
 if(isset($_POST['Submit'])){ //check if form was submitted
     echo $_SESSION;
     echo session_id();
@@ -34,11 +37,13 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         echo 'Correct password.';
         session_start();
         $_SESSION['username'] = $username;
+
+        print_r($_SESSION);
     } else {
         echo 'Wrong username/password.';
     }
 }
-?>
+    ?>
 </div>
 <html>
 
