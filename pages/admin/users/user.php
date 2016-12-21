@@ -166,8 +166,8 @@ if(isset($_POST['Submit'])){
                 <div class="btn-group text-center" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
                 </div>
+                <br><br><a href="#" onclick="window.history.back()">Back to Users</a>
             </div>
-
         </form>
     </div>
     <div class="col-xs-2"></div>
