@@ -4,6 +4,10 @@
 -->
 <div class="text-center">
     <?php
+    if($_SESSION['username']!='' && $page_path == 'pages/login'){
+        header('Location: /servers');
+        die();
+    }
 if(isset($_POST['Submit'])){ //check if form was submitted
     echo $_SESSION;
     echo session_id();
