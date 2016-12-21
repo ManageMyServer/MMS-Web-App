@@ -45,7 +45,7 @@ if(isset($_POST['Submit'])){
     echo $hash;
     echo '<br>';
     if($usernamesql == ''){
-        echo '<script>jQuery(function(){$(\'[name="username"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="usernamegroup"]\').addClass("has-danger")})</script>';
+        echo '<script>jQuery(function(){$(\'[name="username"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="password"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="group"]\').addClass("has-danger")})</script>';
     } elseif(password_verify($password, $hash)){
         echo 'Correct password.';
         session_start();
@@ -55,8 +55,8 @@ if(isset($_POST['Submit'])){
         header('Location: /');
         die();
     } else {
-        echo 'Invalid password.';
-        echo '<script>jQuery(function(){$(\'[name="password"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="passwordgroup"]\').addClass("has-danger")});</script>';
+        echo 'Invalid username/password.';
+        echo '<script>jQuery(function(){$(\'[name="username"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="password"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="group"]\').addClass("has-danger")});</script>';
     }
 }
     ?>
@@ -72,12 +72,10 @@ if(isset($_POST['Submit'])){
 
                 <h2>Login</h2>
                 <?php echo $message; ?>
-                <div name="usernamegroup" class="form-group">
+                <div name="group" class="form-group">
                     <div class="form-group">
                         <input type="text" name="username" class="form-control" placeholder="Username" />
                     </div>
-                </div>
-                <div name="passwordgroup" class="form-group">
                     <div class="form-group">
                         <input type="password" name="password" class="form-control" placeholder="Password" />
                     </div>
