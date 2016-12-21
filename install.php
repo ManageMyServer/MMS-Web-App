@@ -46,7 +46,7 @@
            <label class=\"control-label\" for=\"inputDefault\">Site Title (The name of the site displayed in the navigational bar and other places.)</label>
            <input type=\"text\" name=\"site_title\" class=\"form-control\" id=\"inputDefault\">
        </div>
-       <br><input class=\"btn btn-success btn-medium\" type=\"submit\" name=\"submit\" value=\"Validate &amp; Continue\"></input>/form><</p>";
+       <br><input class=\"btn btn-success btn-medium\" type=\"submit\" name=\"submit\" value=\"Validate &amp; Continue\"></input></form></p>";
     } elseif ($_GET["page"] == "validate") {
     echo "
        <title>Validate - Install - ManageMyServer</title>
