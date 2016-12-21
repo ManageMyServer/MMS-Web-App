@@ -47,7 +47,7 @@
                         <input type="password" name="password" class="form-control" placeholder="Password" />
                     </div>
                     <div class="form-group">
-                        <label for="exampleSelect1">Example select</label>
+                        <label for="exampleSelect1">Select Account Type</label>
                         <select name="rank" class="form-control" id="exampleSelect1" size=1>
                             <option>Superuser</option>
                             <option>Admin</option>
