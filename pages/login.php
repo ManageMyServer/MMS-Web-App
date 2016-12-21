@@ -33,6 +33,7 @@ if(isset($_POST['Submit'])){ //check if form was submitted
     while ($row = $result->fetch_array(MYSQLI_NUM))
     {
         $hash = $row[1];
+        $rank = $row[2];
     }
     echo '<br>';
     echo $hash;
@@ -41,7 +42,7 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         echo 'Correct password.';
         session_start();
         $_SESSION['username'] = $username;
-
+        $_SESSION['rank'] = $rank;
         print_r($_SESSION);
     } else {
         echo 'Invalid username/password.';
