@@ -42,6 +42,10 @@
            <label class=\"control-label\" for=\"inputDefault\">Table Prefix (If none entered, it will be _ .)</label>
            <input type=\"text\" name=\"db_prefix\" class=\"form-control\" id=\"inputDefault\">
        </div>
+       <div class=\"form-group\">
+           <label class=\"control-label\" for=\"inputDefault\">Site Title (The name of the site displayed in the navigational bar and other places.)<label>
+           <input type=\"text\" name=\"site_title\" class=\"form-control\" id=\"inputDefault\">
+       </div>
        <br><input class=\"btn btn-success btn-medium\" type=\"submit\" name=\"submit\" value=\"Validate &amp; Continue\"></input></p>";
     } elseif ($_GET["page"] == "validate") {
     echo "
@@ -54,6 +58,7 @@
        $password = $_POST['db_password'];
        $database = $_POST['db_name'];
        $prefix = $_POST['db_prefix'];
+       $site_title = $_POST['site_title'];
        // Create connection
        $conn = new mysqli($address, $username, $password, $database);
        // Check connection
