@@ -58,7 +58,7 @@ window.cookieconsent.initialise({
                             <li><a href="/profile">Manage Profile</a></li>
                             <li><a href="/settings">Settings</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="/">Log Out</a></li>
+                            <li><a href="/logout">Log Out</a></li>
                         </ul>
                     </li>
                 </ul>
