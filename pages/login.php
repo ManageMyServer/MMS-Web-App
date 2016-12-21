@@ -4,9 +4,6 @@
 -->
 <div class="text-center">
     <?php
-if(!($_SESSION['username']=='')){
-    header('Location: /');
-}
 if(isset($_POST['Submit'])){ //check if form was submitted
     echo $_SESSION;
     echo session_id();

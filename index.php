@@ -1,7 +1,7 @@
 <?php
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
-//echo $config['db_address'];
+
 if($config['db_address']==''){
     header("Location: /install.php");
     die();
@@ -31,6 +31,10 @@ if(empty($directories[0]) && empty($directories[1])){
     if(substr($page_path, -1) == "/"){
         $page_path = rtrim($page_path, '/');
     }
+}
+if($_SESSION['username']=='' && $page_path != 'pages/login'){
+    header('Location: /login');
+    die();
 }
 if(file_exists($page_path.".php")) {
     include $page_path. ".php";
