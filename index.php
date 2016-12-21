@@ -18,6 +18,8 @@ if(empty($directories[0]) && empty($directories[1])){
     $page_path = 'pages/index';
 } elseif ($directories[1]=="admin" && empty($directories[2])) {
     $page_path = 'pages/admin/index';
+}elseif ($directories[1]=="admin" && $directories[2]=="users" && empty($directories[3])) {
+    $page_path = 'pages/admin/users/index';
 } else {
     $n = 0;
     foreach($directories as $directory){
