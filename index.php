@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+ob_start();
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 
