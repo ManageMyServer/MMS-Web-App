@@ -41,7 +41,7 @@ window.cookieconsent.initialise({
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><?echo $config['site_title']?></a>
+                <a class="navbar-brand" href="/"><?php echo $config['site_title']?></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
