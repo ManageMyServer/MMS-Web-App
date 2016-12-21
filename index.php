@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 //echo $config['db_address'];
@@ -38,7 +37,6 @@ if(file_exists($page_path.".php")) {
 } else {
     include $_SERVER['DOCUMENT_ROOT'].'/pages/errors/404.php';
 }
-
 ?>
 <?php
 include 'pages/includes/footer.php';
