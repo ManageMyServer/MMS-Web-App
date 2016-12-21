@@ -26,7 +26,7 @@ window.cookieconsent.initialise({
     <style>
         p {
             font-size: 12;
-        };
+        }
     </style>
 </head>
 <body>
@@ -39,7 +39,7 @@ window.cookieconsent.initialise({
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">SITENAME</a>
+                <a class="navbar-brand" href="/">$config['']</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
