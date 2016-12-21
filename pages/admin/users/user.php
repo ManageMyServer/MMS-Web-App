@@ -1,4 +1,5 @@
 <?php
+$id = $_GET['id'];
 $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
 // Check connection
 if ($conn->connect_error) {
@@ -45,6 +46,101 @@ if(sizeof($users) == 0){
         </div>
     </div>';
 }
+if(isset($_POST['Submit'])){
+    if($_POST['username'] == $username && $_POST['password'] == ''){
+        $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
+        $rank = $_POST['rank'];
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+        // Check connection
+        if ($conn->connect_error) {
+            die('Connection failed: ' . $conn->connect_error);
+        }
+        $sql = 'UPDATE '.$config['table_prefix'].'_users SET rank=? WHERE id=?';
+        $stmt = $conn->stmt_init();
+        if(!$stmt->prepare($sql))
+        {
+            print "Failed to prepare statement\n";
+        }
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("si", $rank, $id);
+        $stmt->execute();
+        if(empty(mysqli_stmt_error($stmt))){
+            header("Refresh:0");
+        }
+        echo mysqli_stmt_error($stmt);
+    } elseif($_POST['username'] == $username){
+        $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
+        $password = $_POST['password'];
+        $rank = $_POST['rank'];
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+        // Check connection
+        if ($conn->connect_error) {
+            die('Connection failed: ' . $conn->connect_error);
+        }
+        $sql = 'UPDATE '.$config['table_prefix'].'_users SET password=?, rank=? WHERE id=?';
+        $stmt = $conn->stmt_init();
+        if(!$stmt->prepare($sql))
+        {
+            print "Failed to prepare statement\n";
+        }
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssi", $hash, $rank, $id);
+        $stmt->execute();
+        if(empty(mysqli_stmt_error($stmt))){
+            header("Refresh:0");
+        }
+        echo mysqli_stmt_error($stmt);
+    } elseif ($_POST['password'] == ''){
+        $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
+        $username = $_POST['username'];
+        $rank = $_POST['rank'];
+        $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+        // Check connection
+        if ($conn->connect_error) {
+            die('Connection failed: ' . $conn->connect_error);
+        }
+        $sql = 'UPDATE '.$config['table_prefix'].'_users SET username=?, rank=? WHERE id=?';
+        $stmt = $conn->stmt_init();
+        if(!$stmt->prepare($sql))
+        {
+            print "Failed to prepare statement\n";
+        }
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssi", $username, $rank, $id);
+        $stmt->execute();
+        if(empty(mysqli_stmt_error($stmt))){
+            header("Refresh:0");
+        }
+        echo mysqli_stmt_error($stmt);
+    } else {
+        $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $rank = $_POST['rank'];
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+        // Check connection
+        if ($conn->connect_error) {
+            die('Connection failed: ' . $conn->connect_error);
+        }
+        $sql = 'UPDATE '.$config['table_prefix'].'_users SET username=?, password=?, rank=? WHERE id=?';
+        $stmt = $conn->stmt_init();
+        if(!$stmt->prepare($sql))
+        {
+            print "Failed to prepare statement\n";
+        }
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssi", $username, $password, $rank, $id);
+        $stmt->execute();
+        if(empty(mysqli_stmt_error($stmt))){
+            header("Refresh:0");
+        }
+        echo mysqli_stmt_error($stmt);
+
+    }
+}
 ?>
 <div class="container">
     <div class="col-xs-2"></div>
@@ -56,7 +152,7 @@ if(sizeof($users) == 0){
             </div>
             <div class="form-group">
                 <label for="password">Change Password (leave blank if you don't want to change it)</label>
-                <input id="password" type="password" name="password" class="form-control" value="<?php echo $results['0']['0'];?>" />
+                <input id="password" type="password" name="password" class="form-control"/>
             </div>
             <div class="form-group">
                 <label for="exampleSelect1">User type</label>
