@@ -8,14 +8,19 @@
         header('Location: /servers');
         die();
     }
-if(isset($_POST['Submit'])){ //check if form was submitted
-    echo $_SESSION;
-    echo session_id();
+if(isset($_POST['Submit'])){
+    echo '
+    <script>
+    document.getElementsByName("username").className = "form-control";
+    document.getElementsByName("password").className = "form-control";
+    document.getElementsByName("passwordgroup").className = "form-group";
+    document.getElementsByName("passwordgroup").className = "form-group";
+    </script>
+    ';
     $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
-    $username = $_POST['username']; //get input text
+    $username = $_POST['username'];
     $password =$_POST['password'];
     $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
-    // Check connection
     if ($conn->connect_error) {
         die('Connection failed: ' . $conn->connect_error);
     }
@@ -32,13 +37,16 @@ if(isset($_POST['Submit'])){ //check if form was submitted
     $hash;
     while ($row = $result->fetch_array(MYSQLI_NUM))
     {
+        $usernamesql = $row[0];
         $hash = $row[1];
         $rank = $row[2];
     }
     echo '<br>';
     echo $hash;
     echo '<br>';
-    if(password_verify($password, $hash)){
+    if($usernamesql == ''){
+        echo '<script>jQuery(function(){$(\'[name="username"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="usernamegroup"]\').addClass("has-danger")})</script>';
+    } elseif(password_verify($password, $hash)){
         echo 'Correct password.';
         session_start();
         $_SESSION['username'] = $username;
@@ -47,13 +55,15 @@ if(isset($_POST['Submit'])){ //check if form was submitted
         header('Location: /');
         die();
     } else {
-        echo 'Invalid username/password.';
+        echo 'Invalid password.';
+        echo '<script>jQuery(function(){$(\'[name="password"]\').addClass("form-control-danger")});jQuery(function(){$(\'[name="passwordgroup"]\').addClass("has-danger")});</script>';
     }
 }
     ?>
 </div>
 <html>
-
+<script>document.getElementsByName("username").className = "form-control";</script>
+<script>document.getElementsByName("password").className = "form-control";</script>
 <body>
     <div class="container">
         <div class="col-xs-3"></div>
@@ -62,16 +72,20 @@ if(isset($_POST['Submit'])){ //check if form was submitted
 
                 <h2>Login</h2>
                 <?php echo $message; ?>
-                <div class="form-group">
-                    <input type="text" name="username" class="form-control" placeholder="Username" />
+                <div name="usernamegroup" class="form-group">
+                    <div class="form-group">
+                        <input type="text" name="username" class="form-control" placeholder="Username" />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Password" />
+                <div name="passwordgroup" class="form-group">
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Password" />
+                    </div>
                 </div>
                 <div class="btn-group" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
                 </div>
-            </form>
+</form>
         </div>
         <div class="col-xs-3"></div>
     </div>
