@@ -17,10 +17,10 @@
        <br><br><a href=\"install.php?page=database\" class=\"btn btn-success btn-medium\">Continue</a></p>";
     } elseif ($_GET["page"] == "database") {
     echo "
-       <title>Configure Database - Install - ManageMyServer</title>
-       <h2>Configure Database</h2>
+       <title>Configure - Install - ManageMyServer</title>
+       <h2>Configure ManageMyServer</h2>
        <p>
-       This will lead you through the database setup.
+       This will lead you through the database and configuration setup.
        <form method=\"post\" action=\"install.php?page=validate\">
        <div class=\"form-group\">
            <label class=\"control-label\" for=\"inputDefault\">Database Address</label>
