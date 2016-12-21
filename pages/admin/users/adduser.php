@@ -59,6 +59,7 @@
                     <div class="btn-group" role="group">
                         <input type="submit" name="Submit" class="btn btn-primary" />
                     </div>
+                    <br><br><a href="#" onclick="window.history.back()">Back to Users</a>
                 </form>
             </div>
         </div>
