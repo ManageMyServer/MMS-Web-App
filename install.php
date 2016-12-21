@@ -69,6 +69,7 @@ return [
     \'db_username\' => \''.$username.'\',
     \'db_password\' => \''.$password.'\',
     \'table_prefix\' => \''.$prefix.'\',
+    \'site_title\' => \''.$sitetitle.'\'
 ]
 ?>
 ');
