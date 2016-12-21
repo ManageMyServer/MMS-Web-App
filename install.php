@@ -103,7 +103,7 @@ return [
        } echo '<br>';
        //Create Record
        $sql = 'INSERT INTO '. $config['table_prefix']. '_users (username, password, rank, root)
-       VALUES (\'Admin\', \''.password_hash(password, PASSWORD_DEFAULT).'\', \'superuser\', 1)';
+       VALUES (\'Admin\', \''.password_hash(password, PASSWORD_DEFAULT).'\', \'Superuser\', 1)';
        if ($conn->query($sql) === TRUE) {
            echo "New record created successfully.";
        } else {
