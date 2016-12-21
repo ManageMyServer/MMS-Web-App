@@ -23,6 +23,7 @@ while ($row = $result->fetch_array(MYSQLI_NUM))
     $users[$username] = array($rank, $root);
 }
 echo'<div class="container">
+        <a href="/pages/adduser.php" class="btn btn-sm btn-primary">Add User</a>
         <div class="table-responsive">
         <table class="table">
             <thead>
