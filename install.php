@@ -109,14 +109,6 @@ return [
        } else {
            echo "Error: " . $sql . "<br>" . $conn->error;
        } echo '<br>';
-       //Create Record
-       $sql = 'INSERT INTO '. $config['table_prefix']. '_prefs (name, value)
-       VALUES (\'sitename\', \'Example Site\')';
-       if ($conn->query($sql) === TRUE) {
-           echo "New record created successfully.";
-       } else {
-           echo "Error: " . $sql . "<br>" . $conn->error;
-       } echo '<br>';
        //END SETUP TABLE
        echo '<br><a href="/login" class="btn btn-success btn-medium">Continue</a>';
        $conn->close();
