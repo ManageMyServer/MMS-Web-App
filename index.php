@@ -14,7 +14,7 @@ $directories = explode("/", $directory);
 $lim = count($directories);
 
 include($_SERVER['DOCUMENT_ROOT'] . $page);
-if($_SESSION['rank'] != 'superuser' && $directories[1]=="admin") {
+if(strtolower($_SESSION['rank']) != strtolower('superuser') && strtolower($_SESSION['rank']) != strtolower('Admin') && $directories[1]=="admin") {
     header('Location: /');
 } elseif(empty($directories[0]) && empty($directories[1])){
     // Must be the index page

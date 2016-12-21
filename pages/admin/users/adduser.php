@@ -6,7 +6,6 @@
     <?php
     if(isset($_POST['Submit'])){ //check if form was submitted
         echo $_SESSION;
-        echo session_id();
         $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
         $username = $_POST['username']; //get input text
         $password =$_POST['password'];
@@ -48,7 +47,12 @@
                         <input type="password" name="password" class="form-control" placeholder="Password" />
                     </div>
                     <div class="form-group">
-                        <input type="rank" name="rank" class="form-control" />
+                        <label for="exampleSelect1">Example select</label>
+                        <select name="rank" class="form-control" id="exampleSelect1" size=1>
+                            <option>Superuser</option>
+                            <option>Admin</option>
+                            <option>User</option>
+                        </select>
                     </div>
                     <div class="btn-group" role="group">
                         <input type="submit" name="Submit" class="btn btn-primary" />

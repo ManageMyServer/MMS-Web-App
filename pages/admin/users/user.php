@@ -46,3 +46,29 @@ if(sizeof($users) == 0){
     </div>';
 }
 ?>
+<div class="container">
+    <div class="col-xs-2"></div>
+    <div class="col-xs-8 ">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="username">User type</label>
+                <input id="username" type="text" name="username" class="form-control" value="<?php echo $results['0']['0'];?>" />
+            </div>
+            <div class="form-group">
+                <label for="exampleSelect1">User type</label>
+                <select name="rank" class="form-control" id="exampleSelect1" size=1>
+                    <option>Superuser</option>
+                    <option>Admin</option>
+                    <option>User</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <div class="btn-group text-center" role="group">
+                    <input type="submit" name="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-xs-2"></div>
+</div>
