@@ -40,7 +40,7 @@ if(isset($_POST['Submit'])){ //check if form was submitted
 
         print_r($_SESSION);
     } else {
-        echo 'Wrong username/password.';
+        echo 'Invalid username/password.';
     }
 }
     ?>
