@@ -51,9 +51,9 @@
                     <div class="form-group">
                         <label for="exampleSelect1">Select Account Type</label>
                         <select name="rank" class="form-control" id="exampleSelect1" size=1>
-                            <option>Superuser</option>
+                            <option disabled>Superuser</option>
                             <option>Admin</option>
-                            <option>User</option>
+                            <option selected>User</option>
                         </select>
                     </div>
                     <div class="btn-group" role="group">
