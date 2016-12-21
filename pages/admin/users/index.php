@@ -17,9 +17,14 @@ $users = array();
 while ($row = $result->fetch_array(MYSQLI_NUM))
 {
 
-    $username = $row[1];
-    $rank = $row[3];
-    $root = $row[4];
+    $username = $row[0];
+    $rank = $row[2];
+    $root = $row[3];
+    if($root = 1){
+        $root = true;
+    } else {
+        $root = false;
+    }
     $users[$username] = array($rank, $root);
 }
 print_r($users);

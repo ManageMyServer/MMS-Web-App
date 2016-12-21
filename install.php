@@ -8,7 +8,7 @@
     <div class="container">
     <center><h2>Install ManageMyServer</h2></center>
     <!-- Insert installer here Tables: users nodes servers settings -->
-    <?php
+        <?php
     if ($_GET["page"] == "") {
     echo "
        <title>Welcome - Install - ManageMyServer</title>
@@ -95,21 +95,15 @@ return [
            die('Connection failed: ' . $conn->connect_error);
        }
        //Create tables
-       $sql = 'CREATE TABLE '. $config['table_prefix'] .'_users (
-       id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-       username VARCHAR(64) NOT NULL UNIQUE,
-       password VARCHAR(255) NOT NULL,
-       rank VARCHAR(64),
-       root BOOLEAN,
-       )';
+       $sql = 'CREATE TABLE '. $config['table_prefix'] .'_users (username VARCHAR(64) NOT NULL UNIQUE,password VARCHAR(255) NOT NULL,rank VARCHAR(64),root Bool DEFAULT false)';
        if ($conn->query($sql) === TRUE) {
            echo 'Table '. $config['table_prefix']. '_users created successfully.';
        } else {
            echo 'Error creating table: ' . $conn->error;
        } echo '<br>';
        //Create Record
-       $sql = 'INSERT INTO '. $config['table_prefix']. '_users (username, password)
-       VALUES (\'Admin\', \''.password_hash(password, PASSWORD_DEFAULT).'\')';
+       $sql = 'INSERT INTO '. $config['table_prefix']. '_users (username, password, rank, root)
+       VALUES (\'Admin\', \''.password_hash(password, PASSWORD_DEFAULT).'\', \'superuser\', 1)';
        if ($conn->query($sql) === TRUE) {
            echo "New record created successfully.";
        } else {

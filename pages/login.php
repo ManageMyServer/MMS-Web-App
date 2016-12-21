@@ -32,8 +32,11 @@ if(isset($_POST['Submit'])){ //check if form was submitted
     $hash;
     while ($row = $result->fetch_array(MYSQLI_NUM))
     {
-        $hash = $row[2];
+        $hash = $row[1];
     }
+    echo '<br>';
+    echo $hash;
+    echo '<br>';
     if(password_verify($password, $hash)){
         echo 'Correct password.';
         session_start();
