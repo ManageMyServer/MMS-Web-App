@@ -49,7 +49,7 @@ if(isset($_POST['Submit'])){
     } elseif(password_verify($password, $hash)){
         echo 'Correct password.';
         session_start();
-        $_SESSION['username'] = $username;
+        $_SESSION['username'] = $usernamesql;
         $_SESSION['rank'] = $rank;
         print_r($_SESSION);
         header('Location: /');
