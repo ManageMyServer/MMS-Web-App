@@ -179,14 +179,14 @@ if(isset($_POST['Submit'])){
                 <label for="password">Change Password (leave blank if you don't want to change it)</label>
                 <input id="password" type="password" name="password" class="form-control"/>
             </div>
-            <div class="form-group">
+            <?php if($results['0']['3'] != 1){echo '<div class="form-group">
                 <label for="exampleSelect1">User type</label>
                 <select name="rank" class="form-control" id="exampleSelect1" size=1>
-                    <option>Superuser</option>
-                    <option>Admin</option>
-                    <option>User</option>
+                    <option>Admin</option>';}?>
+                    <?php if($_SESSION['rank']=='Superuser'){echo'<option>Superuser</option>';}?>
+                    <?php if($results['0']['3'] != 1){echo '<option>User</option>
                 </select>
-            </div>
+            </div>';}?>
             <div class="text-center">
                 <div class="btn-group text-center" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
