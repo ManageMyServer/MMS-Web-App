@@ -181,9 +181,9 @@ if(isset($_POST['Submit'])){
             </div>
             <?php if($results['0']['3'] != 1){echo '<div class="form-group">
                 <label for="exampleSelect1">User type</label>
-                <select name="rank" class="form-control" id="exampleSelect1" size=1>
-                    <option>Admin</option>';}?>
+                <select name="rank" class="form-control" id="exampleSelect1" size=1>'; ?>
                     <?php if($_SESSION['rank']=='Superuser'){echo'<option>Superuser</option>';}?>
+                    <?php echo '<option>Admin</option>'; ?>
                     <?php if($results['0']['3'] != 1){echo '<option>User</option>
                 </select>
             </div>';}?>
