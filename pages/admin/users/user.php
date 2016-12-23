@@ -191,7 +191,7 @@ if(isset($_POST['Submit'])){
                 <div class="btn-group text-center" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
                 </div>
-                <br><br><a href="#" onclick="window.history.back()">Back to Users</a>
+                <br><br><a href="/admin/users/">Back to Users</a>
             </div>
         </form>
         <?php if($results['0']['3'] != 1){echo '
