@@ -187,9 +187,13 @@ if(isset($_POST['Submit'])){
                 </select>
             </div>
             <div class="text-center">
+                <?php if($_SESSION['rank']=='Superuser'){echo '
                 <div class="btn-group text-center" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary" />
-                </div>
+                </div>';}elseif($results['0']['3'] == 1){echo 'Sorry, you cannot edit the superuser account.';}
+                else{echo'<div class="btn-group text-center" role="group">
+                    <input type="submit" name="Submit" class="btn btn-primary" />
+                </div>';}?>
                 <br><br><a href="/admin/users/">Back to Users</a>
             </div>
         </form>
