@@ -51,8 +51,7 @@
     echo "
        <title>Validate - Install - ManageMyServer</title>
        <h2>Validate Database</h2>
-       <p>
-       This will validate the information you entered on the previous page.<br><b>";
+       <p>This will validate the information you entered on the previous page.<br><b>";
        $address = $_POST['db_address'];
        $username = $_POST['db_username'];
        $password = $_POST['db_password'];
