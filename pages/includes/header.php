@@ -52,9 +52,15 @@ window.cookieconsent.initialise({
                     <li><a href="/nodes">Nodes</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/admin">Admin</a></li>
-                    <li><a href="/login">Log In</a></li>
-                    <li><a href="/logout">Log Out</a></li>
+                    <?php if(strtolower($_SESSION['rank']) == "admin" | strtolower($_SESSION['rank']) == "superuser" ){
+                              echo '<li><a href="/admin">Admin</a></li>';
+                          };?>
+                    <?php if($_SESSION['username'] == null){
+                              echo '<li><a href="/login">Log In</a></li>';
+                          };?>
+                    <?php if($_SESSION['username'] != null){
+                              echo '<li><a href="/logout">Log Out</a></li>';
+                          };?>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
