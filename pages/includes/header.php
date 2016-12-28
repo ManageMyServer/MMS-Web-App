@@ -53,7 +53,6 @@ window.cookieconsent.initialise({
                         <li><a href="/servers">Servers</a></li>
                         <li><a href="/nodes">Nodes</a></li>';
                         };?>
-                    <
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if(strtolower($_SESSION['rank']) == "admin" | strtolower($_SESSION['rank']) == "superuser" ){
