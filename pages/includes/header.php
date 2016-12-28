@@ -48,8 +48,12 @@ window.cookieconsent.initialise({
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/servers">Servers</a></li>
-                    <li><a href="/nodes">Nodes</a></li>
+                    <?php if($_SESSION['username'] != null){
+                        echo '
+                        <li><a href="/servers">Servers</a></li>
+                        <li><a href="/nodes">Nodes</a></li>';
+                        };?>
+                    <
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if(strtolower($_SESSION['rank']) == "admin" | strtolower($_SESSION['rank']) == "superuser" ){
