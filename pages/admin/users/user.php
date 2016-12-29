@@ -154,7 +154,7 @@ if(isset($_POST['Submit'])){
             print "Failed to prepare statement\n";
         }
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssi", $username, $password, $rank, $id);
+        $stmt->bind_param("sssi", $username, $hash, $rank, $id);
         $stmt->execute();
         if(empty(mysqli_stmt_error($stmt))){
             header("Refresh:0");
