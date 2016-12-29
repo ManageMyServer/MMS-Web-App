@@ -102,14 +102,6 @@ return [
        } echo '<br>';
        //Create Record
        $sql = 'INSERT INTO '. $config['table_prefix']. '_users (username, password, rank, root)
-       VALUES (\'Root\', \'$2y$10$ryL3.YbXdxHZK9Hg9Ad9bu98GH4.xwxlBFb2B8l.0dj0Eus0JPj0q\', \'Superuser\', 1)';
-       if ($conn->query($sql) === TRUE) {
-           echo "";
-       } else {
-           echo "Error: " . $sql . "<br>" . $conn->error;
-       };
-       //Create Record
-       $sql = 'INSERT INTO '. $config['table_prefix']. '_users (username, password, rank, root)
        VALUES (\'Admin\', \''.password_hash(password, PASSWORD_DEFAULT).'\', \'Superuser\', 1)';
        if ($conn->query($sql) === TRUE) {
            echo "New record created successfully.";
