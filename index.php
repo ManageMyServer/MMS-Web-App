@@ -4,9 +4,30 @@ ob_start();
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 
+//Lastseen
+if($_SESION['username']==null){
+    $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
+    // Check connection
+    if ($conn->connect_error) {
+        die('Connection failed: ' . $conn->connect_error);
+    }
+    $sql = 'UPDATE '.$config['table_prefix'].'_users SET lastseen=CURRENT_TIMESTAMP WHERE username=?';
+    $stmt = $conn->stmt_init();
+    if(!$stmt->prepare($sql))
+    {
+        print "Failed to prepare statement\n";
+    }
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $_SESSION['username']);
+    $stmt->execute();
+}
+
 if($config['db_address']==''){
     header("Location: /install.php");
     die();
+}
+if($_SESSION['username']==null) {
+
 }
 include 'pages/includes/header.php';
 $directory = $_SERVER['REQUEST_URI'];
