@@ -94,7 +94,7 @@ return [
            die('Connection failed: ' . $conn->connect_error);
        }
        //Create tables
-       $sql = 'CREATE TABLE '. $config['table_prefix'] .'_users (username VARCHAR(64) NOT NULL UNIQUE,password VARCHAR(255) NOT NULL,rank VARCHAR(64),root Bool DEFAULT false, id MEDIUMINT NOT NULL AUTO_INCREMENT, primary key(id))';
+       $sql = 'CREATE TABLE '. $config['table_prefix'] .'_users (username VARCHAR(64) NOT NULL UNIQUE,password VARCHAR(255) NOT NULL,rank VARCHAR(64),root Bool DEFAULT false, id MEDIUMINT NOT NULL AUTO_INCREMENT, primary key(id), lastseen TIMESTAMP)';
        if ($conn->query($sql) === TRUE) {
            echo 'Table '. $config['table_prefix']. '_users created successfully.';
        } else {
