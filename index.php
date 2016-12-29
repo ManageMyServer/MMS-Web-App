@@ -4,6 +4,11 @@ ob_start();
 session_start();
 $config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');
 
+if($config['db_address']==''){
+    header("Location: /install.php");
+    die();
+}
+
 //Lastseen
 if($_SESION['username']==null){
     $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
@@ -22,10 +27,6 @@ if($_SESION['username']==null){
     $stmt->execute();
 }
 
-if($config['db_address']==''){
-    header("Location: /install.php");
-    die();
-}
 if($_SESSION['username']==null) {
 
 }
