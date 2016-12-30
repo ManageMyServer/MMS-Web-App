@@ -1,3 +1,3 @@
 <?php
-    echo 'Nodes page.; 
+    echo 'Nodes page.'; 
 ?>
