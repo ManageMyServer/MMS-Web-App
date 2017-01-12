@@ -19,12 +19,28 @@ window.cookieconsent.initialise({
 })});
 </script>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title><?php echo $config['site_title']?> - ManageMyServer</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    
+    <title>Site - ManageMyServer</title>
     <meta charset="utf-8">
+    
+    <link rel="stylesheet" type="text/css" href="/core/assets/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" type="text/css" href="/core/assets/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="/core/assets/css/ripples.min.css">
+    
+    <script src="/core/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/core/assets/js/material.min.js">
+    <link rel="stylesheet" type="text/css" href="/core/assets/js/ripples.min.js">
+    
     <style>
         p {
             font-size: 12;
