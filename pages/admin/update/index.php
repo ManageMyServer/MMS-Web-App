@@ -1,4 +1,4 @@
-<span class="text-center"><h2>Update ManageMyServer</h2><small> Work in Progress</small></span>
+<span class="text-center"><h2>Update ManageMyServer <small>Work in Progress</small></h2></span>
 <?php
     $local_version = "0";
     $version = file_get_contents("https://managemyserver.github.io/display/latest_version.html");
