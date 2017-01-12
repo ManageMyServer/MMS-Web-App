@@ -5,7 +5,7 @@
     echo 'Local Version: ' . $local_version;
     echo '<br>Latest Version: ' . $version;
     echo '<br><br>';
-    if(($local_version)!==($version)) {
+    if(($local_version)==($version)) {
         echo 'Your version of ManageMyServer is up to date.';
     } else {
         echo file_get_contents("https://managemyserver.github.io/display/update.html");
