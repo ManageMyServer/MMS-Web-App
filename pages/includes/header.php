@@ -36,7 +36,7 @@ window.cookieconsent.initialise({
     <link rel="stylesheet" type="text/css" href="/core/assets/css/ripples.min.css">
     
     <script src="/core/assets/js/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/core/assets/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="/core/assets/js/material.min.js">
     <link rel="stylesheet" type="text/css" href="/core/assets/js/ripples.min.js">
