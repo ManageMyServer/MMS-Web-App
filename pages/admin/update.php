@@ -1,7 +1,9 @@
-<span class="text-center"><h2>Update ManageMyServer <small>Work in Progress</small></h2></span>
+<span class="text-center"><h2>Update ManageMyServer</h2></span>
 <?php
     $local_version = "0";
-    $version = file_get_contents("https://managemyserver.github.io/display/latest_version.html");
+    $data_file = file_get_contents("https://managemyserver.github.io/display/data.html");
+    $object = json_decode($data_file);
+    $version = $object->version;
     echo 'Local Version: ' . $local_version;
     echo '<br>Latest Version: ' . $version;
     echo '<br><br>';
