@@ -2,18 +2,17 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
+            <th>Node Name</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Node Name</td>
+            <td>Node1</td>
             <td><span class="label label-success">Online</span></td>
         </tr>
         <tr>
-            <td>Node Name</td>
+            <td>Node2</td>
             <td><span class="label label-danger">Offline</span></td>
         </tr>
     </tbody>
