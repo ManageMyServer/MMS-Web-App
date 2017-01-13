@@ -1,10 +1,10 @@
 <span class="text-center"><h2>Update ManageMyServer</h2></span>
 <?php
-    $local_version = "0";
+    $current_version = "0";
     $data_file = file_get_contents("https://managemyserver.github.io/display/data.html");
     $object = json_decode($data_file);
     $version = $object->version;
-    echo 'Local Version: ' . $local_version;
+    echo 'Current Version: ' . $current_version;
     echo '<br>Latest Version: ' . $version;
     echo '<br><br>';
     if(($local_version)==($version)) {
