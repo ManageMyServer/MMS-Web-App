@@ -1,3 +1,4 @@
+<span class="text-center"><h2>Users</h2></span>
 <?php
 $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
 // Check connection
