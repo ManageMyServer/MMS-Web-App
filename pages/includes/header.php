@@ -67,7 +67,8 @@ window.cookieconsent.initialise({
                     <?php if($_SESSION['username'] != null){
                         echo '
                         <li><a href="/servers">Servers</a></li>
-                        <li><a href="/nodes">Nodes</a></li>';
+                        <li><a href="/nodes">Nodes</a></li>
+                        <li><a href="/status">Status</a></li>';
                         };?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
