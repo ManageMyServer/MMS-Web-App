@@ -35,7 +35,7 @@ echo'<div class="container">
             </thead>
             <tbody>';
         foreach($results as $user) {
-            echo'<tr><!--<td>'.$user[4].'<td>--><a href="/admin/users/user/?id='.$user[4].'">'.$user[0].'</td><td>'.$user[2].'</td></tr>';
+            echo'<tr><!--<td>'.$user[4].'--><td><a href="/admin/users/user/?id='.$user[4].'">'.$user[0].'</td><td>'.$user[2].'</td></tr>';
         }
         echo'</tbody>
         </table>
