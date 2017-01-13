@@ -1,4 +1,5 @@
 <span class="text-center"><h2>Nodes <small>Non-Functional (Work in Progress, Display only)</small></h2></span>
+<a href="/nodes/addnode" class="btn btn-sm btn-primary">Add Node</a>
 <table class="table">
     <thead>
         <tr>
