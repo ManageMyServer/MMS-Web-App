@@ -24,7 +24,7 @@ window.cookieconsent.initialise({
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
     
-    <title>Site - ManageMyServer</title>
+    <title><?php echo $config['site_title']?> - ManageMyServer</title>
     <meta charset="utf-8">
     
     <link rel="stylesheet" type="text/css" href="/core/assets/css/bootstrap.min.css">
