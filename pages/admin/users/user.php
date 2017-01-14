@@ -173,7 +173,7 @@ if(isset($_POST['Submit'])){
         <form action="" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" type="text" name="username" class="form-control" value="<?php echo $results['0']['0'];?>" />
+                <input id="username" type="text" name="username" class="form-control" value="<?php echo $results['0']['0'];?>" required />
             </div>
             <div class="form-group">
                 <label for="password">Change Password (leave blank if you don't want to change it)</label>
