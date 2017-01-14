@@ -211,7 +211,7 @@ if(isset($_POST['Submit'])){
                         <h4 class="modal-title">Delete User</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure yo want to delete this user?</p>
+                        <p>Are you sure you want to delete this user?</p>
                     </div>
                     <div class="modal-footer">
                         <button style="float: left" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
