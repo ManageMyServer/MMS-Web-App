@@ -44,8 +44,8 @@ if(strtolower($_SESSION['rank']) != strtolower('superuser') && strtolower($_SESS
     $page_path = 'pages/index';
 } elseif ($directories[1]=="admin" && empty($directories[2])) {
     $page_path = 'pages/admin/index';
-}elseif ($directories[1]=="admin" && $directories[2]=="users" && empty($directories[3])) {
-    $page_path = 'pages/admin/users/index';
+}elseif ($directories[1]=="example" && $directories[2]=="page" && empty($directories[3])) {
+    $page_path = 'pages/example/page/index';
 } else {
     $n = 0;
     foreach($directories as $directory){
