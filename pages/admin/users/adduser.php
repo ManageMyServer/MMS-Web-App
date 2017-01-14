@@ -43,10 +43,10 @@
                     <h2>Create User</h2>
                     <?php echo $message; ?>
                     <div class="form-group">
-                        <input type="text" name="username" class="form-control" placeholder="Username" />
+                        <input type="text" name="username" class="form-control" placeholder="Username" required />
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password" />
+                        <input type="password" name="password" class="form-control" placeholder="Password" required />
                     </div>
                     <div class="form-group">
                         <label for="exampleSelect1">Select Account Type</label>
