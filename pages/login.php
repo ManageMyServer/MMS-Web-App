@@ -74,14 +74,14 @@ if(isset($_POST['Submit'])){
                 <?php echo $message; ?>
                 <div name="group" class="form-group">
                     <div class="form-group">
-                        <input type="text" name="username" class="form-control" placeholder="Username" />
+                        <input type="text" name="username" class="form-control" placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="password" class="form-control" placeholder="Password" />
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                     </div>
                 </div>
                 <div class="btn-group" role="group">
-                    <input type="submit" name="Submit" class="btn btn-primary" />
+                    <input type="submit" name="Submit" class="btn btn-primary">
                 </div>
 </form>
         </div>
