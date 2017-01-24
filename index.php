@@ -27,9 +27,6 @@ if($_SESION['username']==null){
     $stmt->execute();
 }
 
-if($_SESSION['username']==null) {
-
-}
 include 'pages/includes/header.php';
 $directory = $_SERVER['REQUEST_URI'];
 
