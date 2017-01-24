@@ -71,8 +71,7 @@
         ?>
     </div>
     <div class="container">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-6 text-center">
+        <div class="col-xs-offset-3 col-xs-6 text-center">
             <form action="" method="post">
 
                 <h2>Login</h2>
