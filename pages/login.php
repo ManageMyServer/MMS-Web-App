@@ -88,7 +88,7 @@
                 <div class="btn-group" role="group">
                     <input type="submit" name="Submit" class="btn btn-primary">
                 </div>
-</form>
+            </form>
         </div>
         <div class="col-xs-3"></div>
     </div>
