@@ -1,7 +1,7 @@
 <?php
 include('/pages/config.php');
-if($config['db_address']==''){
-    header("Location: /index.php");
+if($config['db_address']!==''){
+    header("Location: /");
     die();
 }
 ?>
