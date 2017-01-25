@@ -1,3 +1,10 @@
+<?php
+include('/pages/config.php');
+if($config['db_address']==''){
+    header("Location: /index.php");
+    die();
+}
+?>
 <!-- (c) ManageMyServer <?php echo date("Y"); ?> -->
 <head>
   <link href="/core/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
