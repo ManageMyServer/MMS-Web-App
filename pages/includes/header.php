@@ -72,8 +72,7 @@ window.cookieconsent.initialise({
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if(strtolower($_SESSION['rank']) == "admin" | strtolower($_SESSION['rank']) == "superuser" ){
-                              echo '
-                              <li><a href="/nodes">Nodes</a></li>
+                              echo '<li><a href="/nodes">Nodes</a></li>
                               <li><a href="/admin">Admin</a></li>';
                           };?>
                     <?php if($_SESSION['username'] == null){
