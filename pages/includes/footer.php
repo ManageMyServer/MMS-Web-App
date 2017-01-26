@@ -6,7 +6,7 @@
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php echo $config['site_title']?>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                 <li><a href="https://github.com/ManageMyServer">&copy; ManageMyServer <?php echo date("Y");?></a></li>
             </ul>
         </div>
