@@ -26,6 +26,7 @@ while ($row = $result->fetch_array(MYSQLI_NUM))
 }
 if(sizeof($users) == 0){
     echo '<div class="text-center">No users with that ID were found.</div>';
+    die();
 } elseif(1==2) { // Changed to hide table -> originally } else {
     echo'<div class="container">
         <div class="table-responsive">
