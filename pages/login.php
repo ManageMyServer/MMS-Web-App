@@ -14,7 +14,7 @@
         <div class="text-center">
         <?php
         if($_SESSION['username']!='' && $page_path == 'pages/login'){
-            header('Location: /servers');
+            header('Location: '. $GET_["continue"] . '');
             die();
         }
         if(isset($_POST['Submit'])){
@@ -61,7 +61,7 @@
                 $_SESSION['username'] = $usernamesql;
                 $_SESSION['rank'] = $rank;
                 print_r($_SESSION);
-                header('Location: /');
+                header('Location: '. $GET_["continue"] . '');
                 die();
             } else {
                 echo 'Invalid username/password.';
