@@ -1,7 +1,7 @@
 <div class="text-center"><h2>Admin Panel</h2></div>
 <a href="/admin/users" type="button" class="btn btn-raised ripple-effect btn-primary">Users</a><br>
 <a href="/admin/update" type="button" class="btn btn-raised ripple-effect btn-primary">Update</a><br>
-
+<a href="/admin/prefs" type="button" class="btn btn-raised ripple-effect btn-primary">Preferences</a><br>
 <?php
 $conn = new mysqli($config['db_address'], $config['db_username'], $config['db_password'], $config['db_name']);
 // Check connection
