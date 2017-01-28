@@ -1,0 +1,1 @@
+<?php echo 'Preferences page.'; ?>
