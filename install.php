@@ -101,9 +101,9 @@ return [
            die('Connection failed: ' . $conn->connect_error);
        }
        //Create tables
-       $sql = 'CREATE TABLE '.$config['table_prefix'].' ( `ID` int NOT NULL AUTO_INCREMENT, `ip` TEXT, `name` TEXT NOT NULL , `online` INT NOT NULL , PRIMARY KEY (ID) )';
+       $sql = 'CREATE TABLE '.$config['table_prefix'].'_nodes ( `ID` int NOT NULL AUTO_INCREMENT, `ip` TEXT, `name` TEXT NOT NULL , `online` INT NOT NULL , `port` INT NOT NULL, `ports` TEXT, PRIMARY KEY (ID) )';
        if ($conn->query($sql) === TRUE) {
-           echo 'Table '. $config['table_prefix']. '_users created successfully.';
+           echo 'Table '. $config['table_prefix']. '_nodes created successfully.';
        } else {
            echo 'Error creating table: ' . $conn->error;
        } echo '<br>';
