@@ -1,3 +1,5 @@
+<div class="col-xs-3"></div>
+<div class="col-xs-6 text-center">
 <h2>Add Node</h2>
 <p>
 Confused? Click the link to see how to add a node: <a href="https://managemyserver.github.io/docs/addnode.html">Instructions on how to add node.</a><br>
@@ -25,3 +27,5 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
 <div class="btn-group" role="group">
    <a href="/nodes"><button type="button" class="btn btn-primary">Create</button></a>
 </div>
+</div>
+<div class="col-xs-3"></div>
