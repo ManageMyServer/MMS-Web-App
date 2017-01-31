@@ -6,7 +6,7 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
 </p>
 <div class="form-group">
    <label class="control-label">Name the node</label>
-   <input type="text" class="form-control" placeholder="Node Name (Ex, US-Node1)">
+   <input type="text" class="form-control" placeholder="US-Node1">
 </div>
 <div class="form-group">
    <label class="control-label">Public IP of the node</label>
@@ -21,7 +21,7 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
    <input type="text" class="form-control" placeholder="25565,25626,26738">
 </div>
 <div class="btn-group" role="group">
-   <a href="/nodes"><button type="button" class="btn btn-primary">Create</button></a>
+   <a href="/nodes"><button type="button" class="btn btn-primary">Add Node</button></a>
 </div>
 </div>
 <div class="col-xs-3"></div>
