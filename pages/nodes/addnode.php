@@ -31,7 +31,7 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
     <form action="" method="post">
         <div class="form-group">
             <label class="control-label">Name the node</label>
-            <input name="name" type="text" class="form-control" placeholder="Node Name (Ex, US-Node1)" required />
+            <input name="name" type="text" class="form-control" placeholder="US-Node1" required />
         </div>
         <div class="form-group">
             <label class="control-label">Public IP of the node</label>
@@ -46,7 +46,7 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
             <input name="ports" type="text" class="form-control" placeholder="25565,25626,26738" required />
         </div>
         <div class="btn-group" role="group">
-            <input type="submit" name="Submit" class="btn btn-primary" />
+            <input type="submit" name="Submit" value="Add Node"class="btn btn-primary" />
         </div>
     </form>
 </div>
