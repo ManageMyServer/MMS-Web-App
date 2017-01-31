@@ -11,8 +11,12 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
    <input type="text" class="form-control" placeholder="12.34.567.89">
 </div>
 <div class="form-group">
-   <label class="control-label">Type the code displayed when application is launched.</label>
-   <input type="text" class="form-control" placeholder="ys73j93">
+   <label class="control-label">Public IP of the node</label>
+   <input type="text" class="form-control" placeholder="12.34.567.89">
+</div>
+<div class="form-group">
+   <label class="control-label">Type the port the software is running on.</label>
+   <input type="text" class="form-control" placeholder="7473">
 </div>
 <div class="form-group">
    <label class="control-label">Type the availible ports separated by commas. (No spaces!)</label>
