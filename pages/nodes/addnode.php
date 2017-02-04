@@ -42,6 +42,10 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
             <input name="port" type="text" class="form-control" placeholder="7473" required />
         </div>
         <div class="form-group">
+            <label class="control-label">Type the code displayed when the application is launched.</label>
+            <input name="ports" type="text" class="form-control" placeholder="hr7g3x2" required />
+        </div>
+        <div class="form-group">
             <label class="control-label">Type the availible ports separated by commas. (No spaces!)</label>
             <input name="ports" type="text" class="form-control" placeholder="25565,25626,26738" required />
         </div>
