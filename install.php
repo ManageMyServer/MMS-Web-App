@@ -1,9 +1,9 @@
 <?php
-//include('/pages/config.php');
-//if($config['db_address']!==''){
-//    header("Location: /");
-//    die();
-//}
+include('/pages/config.php');
+if($config['db_address']!=='' || $config['db_address']!==null){
+    header("Location: /");
+    die();
+}
 ?>
 <!-- (c) ManageMyServer <?php echo date("Y"); ?> -->
 <head>
