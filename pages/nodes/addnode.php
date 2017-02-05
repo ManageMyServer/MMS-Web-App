@@ -43,4 +43,4 @@ Confused? Click the link to see how to add a node: <a href="https://managemyserv
         </div>
     </form>
 </div>
-<div class="col-xs-3"></div>
+<div class="col-xs-5"></div>
