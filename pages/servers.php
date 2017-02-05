@@ -1,5 +1,6 @@
 <span class="text-center"><h2>Servers <small>Non-Functional (Work in Progress, Display only)</small></h2></span>
 <a href="/servers/addserver" class="btn btn-sm btn-primary">Add Server</a>
+<a href="/servers/server" class="btn btn-sm btn-primary">View Demo</a>
 <table class="table">
     <thead>
         <tr>
