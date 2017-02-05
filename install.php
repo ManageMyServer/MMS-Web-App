@@ -1,6 +1,6 @@
 <?php
 include('/pages/config.php');
-if($config['db_address']!=='' || $config['db_address']!==null){
+if($config['db_address']!='' || $config['db_address']!=null){
     header("Location: /");
     die();
 }
