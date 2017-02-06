@@ -37,7 +37,7 @@
    </div>
 </div>
 <div class="btn-group" role="group">
-   <a href=""><button type="button" class="btn btn-primary">Access WebFTP (Comming Soon)</button></a>
+   <a href=""><button type="button" class="btn btn-primary">Access WebFTP (Coming Soon)</button></a>
 </div>
 </div>
 </div>
