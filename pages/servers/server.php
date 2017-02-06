@@ -44,7 +44,7 @@
    <label class="control-label">IP <small>&bull; Moving a server to a different node changes the IP.</small></label>
    <input disabled type="text" class="form-control" placeholder="12.34.567.89" value="57.33.124.37">
 
-   <label class="control-label">Select Avalible Port for Local <small>&bull; The port 25565 will only be allowed if you have permission for that server.</small></label>
+   <label class="control-label">Select Avalible Port for Local <small>&bull; The ports listed are currently available on the node or being used by this server.</small></label>
    <select class="form-control" id="select">
       <option>25565</option>
       <option selected>25693</option>
