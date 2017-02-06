@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <?$config = include($_SERVER['DOCUMENT_ROOT'].'/core/config.php');?>
-<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#191919"
-    },
-    "button": {
-      "background": "#ededed"
-    }
-  },
-  "theme": "edgeless",
-  "position": "bottom-right"
-})});
-</script>
 <head>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet">
