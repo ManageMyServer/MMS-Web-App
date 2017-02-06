@@ -2,7 +2,6 @@
 // Conceived by Robert Kent, James Bavington & Tom Foyster
 // Modified by Simon Freytag for syntax, namespace, jQuery and Bootstrap
 // Edited for ManageMyServer by BrightSkyz
-mm
 C = {
     // Number of days before the cookie expires, and the banner reappears
     cookieDuration : 365.25,
