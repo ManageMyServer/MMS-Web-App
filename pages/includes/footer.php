@@ -1,5 +1,6 @@
 <!-- We would like it if you kept the credits at the bottom of the page, in this footer. It isnt intrusive to the website. -->
 <footer>
+<script src="/core/classes/cookies.js"></script>
     <hr />
     <span class="pull-right">
         <div class="dropup">
