@@ -59,6 +59,9 @@
 
    <label class="control-label">User <small>&bull; Give the following user full access to this server.</small></label>
    <input type="text" class="form-control" placeholder="Username" value="admin">
+   
+   <label class="control-label">Max RAM <small>&bull; Maximum RAM that can be used by this server.</small></label>
+   <input type="text" class="form-control" placeholder="1024" value="1024">
 
 <div class="btn-group" role="group">
    <a href=""><button type="button" class="btn btn-primary">Submit Changes</button></a>
